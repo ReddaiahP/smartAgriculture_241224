@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css'%}">
+    <link rel="stylesheet" href="{% static 'styles1.css'%}">
+    <title>SmartAgriculture</title>
+     <meta http-equiv="refresh" content="2">
+</head>
+<body>
+    <div class="main-container">
+        <div class="nav-container">
+            <img src="https://www.smartfarm.ag/wp-content/themes/smartfarm/img/logo.png" alt="">
+            <h2>Smart Agriculture</h2>
+            <img src="https://www.smartfarm.ag/wp-content/themes/smartfarm/img/logo.png" alt="">
+        </div>
+        <div class="main-container-content">
+            <div>
+                <h1>Motor Status:{{ last_agriculture_data.motor}}</h1>
+                <h1>Temperature :{{ last_agriculture_data.temp}}°C</h1>
+                <h1>Humidity :{{ last_agriculture_data.humidity}}</h1>
+                <h1>SoilMoisture :{{ last_agriculture_data.soil_moisture}}</h1>
+            </div>
+
+            <a href="predect" > Crop Recomendation</a>
+        </div>
+
+    </div>
+
+
+</body>
+</html>

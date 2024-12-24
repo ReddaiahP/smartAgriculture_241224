@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'stylesheet.css'%}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav-container">
+        <img src="https://www.smartfarm.ag/wp-content/themes/smartfarm/img/logo.png" alt="">
+        <h2>Smart Agriculture</h2>
+        <img src="https://www.smartfarm.ag/wp-content/themes/smartfarm/img/logo.png" alt="">
+    </div>
+
+    <div class="container">
+        <div class="main-contaner">
+
+            <form action="{% url 'result' %}">
+
+                 {% csrf_token %}
+                <h1>CropPrediction</h1>
+                <div class="inputBox">
+                    <input type="number" name="N" required placeholder="Nitrogen">
+                </div>
+                <div class="inputBox">
+                    <input type="number" name="P" required placeholder="Phosphorus">
+                </div>
+                <div class="inputBox">
+                    <input type="number" name="K" required placeholder="Potassium">
+                </div>
+                <div class="inputBox">
+                    <input type="number" name="temp" required placeholder="Temperature">
+                </div>
+                <div class="inputBox">
+                    <input type="number" name="humid" required placeholder="Humidity">
+                </div>
+                <div class="inputBox">
+                    <input type="number" name="ph" required placeholder="Ph value">
+                </div>
+
+                <div class="inputBox">
+                    <input type="number" name="rainfall" required placeholder="Rainfall">
+                </div>
+                <input type="submit" name="" value="Submit" class="btn">
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

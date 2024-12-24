@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css'%}">
+    <link rel="stylesheet" href="{% static 'styles1.css'%}">
+    <title>SmartAgriculture</title>
+
+</head>
+<body>
+    <div class="main-container">
+        <div class="nav-container">
+            <img src="https://www.smartfarm.ag/wp-content/themes/smartfarm/img/logo.png" alt="">
+            <h2>Smart Agriculture</h2>
+            <img src="https://www.smartfarm.ag/wp-content/themes/smartfarm/img/logo.png" alt="">
+        </div>
+
+        <div class="recomended_crop_container">
+            <h1>Recomended crop is "{{ ans.0 }}"</h1>
+        </div>
+
+    </div>
+
+
+</body>
+</html>
